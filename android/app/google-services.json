@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "956000014125",
+    "project_id": "chat-app-syria2025",
+    "storage_bucket": "chat-app-syria2025.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956000014125:android:e101e69f3c00e6e352cda4",
+        "android_client_info": {
+          "package_name": "com.example.chat_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNyXMUwX_dCCiRTZAKV86g2aTUu2MN6y0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
