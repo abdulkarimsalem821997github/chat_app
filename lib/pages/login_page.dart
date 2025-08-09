@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:scholar_chat/constants.dart';
 import 'package:scholar_chat/helper/show_snack_bar.dart';
+import 'package:scholar_chat/pages/chat_cubit/chat_cubit.dart';
 import 'package:scholar_chat/pages/login_cubit/login_cubit.dart';
 import 'package:scholar_chat/pages/resgister_page.dart';
 import 'package:scholar_chat/widgets/custom_button.dart';
@@ -26,7 +27,8 @@ class LoginPage extends StatelessWidget {
           isLoading = true;
         } else if (state is LoginSuccess) {
           isLoading = false;
-          Navigator.pushNamed(context, ChatPage.id);
+          BlocProvider.of<ChatCubit>(context).getMessages();
+          Navigator.pushNamed(context, ChatPage.id, arguments: email);
         } else if (state is LoginFailure) {
           isLoading = false;
           showSnackBar(context, state.errorMessage);
